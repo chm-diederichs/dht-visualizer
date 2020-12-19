@@ -1,0 +1,24 @@
+{
+  "name": "dht-visualizer",
+  "version": "0.0.0",
+  "description": "See DHT peers on a globe",
+  "main": "globe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chm-diederichs/dht-visualizer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chm-diederichs/dht-visualizer/issues"
+  },
+  "homepage": "https://github.com/chm-diederichs/dht-visualizer#readme",
+  "dependencies": {
+    "dht-rpc": "^4.9.6",
+    "dht-size-up": "^1.1.0",
+    "geoip-lite": "^1.4.2"
+  }
+}
