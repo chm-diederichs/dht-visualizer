@@ -6,10 +6,12 @@ const dht = require('dht-rpc')
 const nodes = ['localhost:' + process.argv[2]]
 var bootstrap = dht({ ephemeral: true, bootstrap: nodes })
 
-query(bootstrap, 3, (err, size, seen, samples, ips) => {
+query(bootstrap, 20, (err, size, seen, samples, ips) => {
   var locations = []
 
-  for (let [ip, n] of ips) {
+  for (let [node, n] of ips) {
+    const [ip, id] = node.split('/')
+
     if (ip === '127.0.0.1') continue
 
     var { ll } = geoip.lookup(ip)
