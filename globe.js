@@ -6,19 +6,18 @@ const dht = require('dht-rpc')
 const nodes = ['localhost:' + process.argv[2]]
 var bootstrap = dht({ ephemeral: true, bootstrap: nodes })
 
-query(bootstrap, 20, (err, size, seen, samples, ips) => {
+query(bootstrap, process.argv[3] || 20, (err, size, seen, samples, ips) => {
   var locations = []
 
-  for (let [node, n] of ips) {
-    const [ip, id] = node.split('/')
-
+  for (let [ip, n] of ips) {
     if (ip === '127.0.0.1') continue
 
     var { ll } = geoip.lookup(ip)
-
     var [ latitude, longitude ] = ll
+
     locations.push({ latitude, longitude })
   }
+  console.log(locations.length)
 
-  fs.writeFile('locations.json', JSON.stringify(locations, null, 2), console.error)
+  fs.writeFile('locations.json', 'locations =' + JSON.stringify(locations, null, 2), console.error)
 })

@@ -18,17 +18,21 @@ function start () {
   globus.renderer.backgroundColor = new og.Vec3(150 / 255, 150 / 255, 150 / 255)
 
   globus.planet.setRatioLod(1.3, 1.1)
-  console.log('locations', locations)
 
   const markers = new og.layer.Vector('Markers', {
+    async: true,
     clampToGround: true,
     scaleByDistance: [300000, 50000000, 1000000000000000000]
   })
     .addTo(globus.planet)
 
-  const entities = []
-  locations.map(ll => {
-    const entity = new og.Entity({
+  setTimeout(() => {
+    locations.map(add)
+    globus.renderer.draw()
+  }, 700)
+
+  function add (ll) {
+    markers.add(new og.Entity({
       lonlat: [ll.longitude, ll.latitude],
       label: {
         text: '',
@@ -42,15 +46,13 @@ function start () {
       billboard: {
         outline: 4,
         outlineColor: 'rgba(0,0,0,.4)',
-        src: './marker5.png',
-        width: 32,
-        height: 32,
+        src: './marker.webp',
+        width: 24,
+        height: 27,
         offset: [0, 2]
       }
-    })
-
-    markers.add(entity)
-  })
+    }))
+  }
 
   //   globus.planet.viewExtent(
   // new og.Extent(new og.LonLat(5.56707, 45.15679),
