@@ -3,10 +3,11 @@
 const fs = require('fs')
 const query = require('dht-size-up')
 const geoip = require('geoip-lite')
-const dht = require('@hyperswarm/dht')
+const dht = require('dht-rpc')
 
 const node = dht({
-  ephemeral: true
+  ephemeral: true,
+  bootstrap: ['bootstrap1.hyperdht.org:49737', 'bootstrap2.hyperdht.org:49737', 'bootstrap3.hyperdht.org:49737']
 })
 
 query(node, process.argv[2] || 20, (err, size, seen, samples, ips) => {
