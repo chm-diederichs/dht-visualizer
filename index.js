@@ -15,7 +15,7 @@ function start () {
     }
   })
 
-  globus.renderer.backgroundColor = new og.Vec3(150 / 255, 150 / 255, 150 / 255)
+  globus.renderer.backgroundColor = new og.Vec3(0x37 / 255, 0x39 / 255, 0x40 / 255)
 
   globus.planet.setRatioLod(1.3, 1.1)
 
