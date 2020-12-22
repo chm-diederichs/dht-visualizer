@@ -3,12 +3,13 @@
 const fs = require('fs')
 const query = require('dht-size-up')
 const geoip = require('geoip-lite')
-const dht = require('dht-rpc')
+const dht = require('@hyperswarm/dht')
 
-const nodes = ['localhost:' + process.argv[2]]
-var bootstrap = dht({ ephemeral: true, bootstrap: nodes })
+const node = dht({
+  ephemeral: true
+})
 
-query(bootstrap, process.argv[3] || 20, (err, size, seen, samples, ips) => {
+query(node, process.argv[2] || 20, (err, size, seen, samples, ips) => {
   if (err) {
     console.error(err)
     process.exit()
