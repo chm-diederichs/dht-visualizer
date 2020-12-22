@@ -34,21 +34,12 @@ function start () {
   function add (ll) {
     markers.add(new og.Entity({
       lonlat: [ll.longitude, ll.latitude],
-      label: {
-        text: '',
-        outline: 0,
-        outlineColor: 'rgba(255,255,255,.4)',
-        size: 27,
-        color: 'black',
-        face: 'Lucida Console',
-        offset: [10, -2]
-      },
       billboard: {
         outline: 4,
         outlineColor: 'rgba(0,0,0,.4)',
         src: './marker.webp',
-        width: 24,
-        height: 27,
+        width: 16,
+        height: 18,
         offset: [0, 2]
       }
     }))
