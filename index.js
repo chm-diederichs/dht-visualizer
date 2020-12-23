@@ -33,7 +33,7 @@ function start () {
   globus.renderer.backgroundColor = new og.Vec3(0x37 / 255, 0x39 / 255, 0x40 / 255)
   globus.planet.setRatioLod(1.3, 1.1)
   globus.planet.camera.rotateDown(10, true)
-  globus.planet.camera.rotateLeft(90)
+  globus.planet.camera.rotateRight(90)
   globus.planet.camera.rotateUp(15)
 
   const markers = new og.layer.Vector('Markers', {
