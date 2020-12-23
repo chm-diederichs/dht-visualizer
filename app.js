@@ -19,8 +19,5 @@ app.get('/marker.webp', function(req, res) {
   res.sendFile(path.join(__dirname + '/marker.webp'));
 });
 
-app.get('/index.css', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.css'));
-});
 
 app.listen(process.env.PORT || process.argv[2] || 10001);
