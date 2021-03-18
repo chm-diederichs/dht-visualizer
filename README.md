@@ -1,5 +1,7 @@
 # dht-visualizer
 
+Find locations of peers in the DHT. Made for http://globe.hyperdht.org/.
+
 ## Install
 ```
 git clone git@github.com:chm-diederichs/dht-visualizer.git
