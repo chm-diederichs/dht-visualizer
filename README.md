@@ -11,7 +11,7 @@ node globe.js
 node app.js <PORT>
 ```
 
-## Buildinf openglobus
+## Rebuilding OpenGlobus
 
 A build of OpenGlobus is in this repo, but in case you would like to rebuild, follow the following commands taken from: https://www.github.com/openglobus/openglobus
 
