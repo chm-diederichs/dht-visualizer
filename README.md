@@ -36,3 +36,6 @@ npm run-script updatedb license_key=LICENSE_KEY
 ```
 You can register for a free license key [here](https://www.maxmind.com/en/geolite2/signup)
 
+## Future work
+
+Would be great to get a globe like [this](https://stripe.com/blog/globe)...
