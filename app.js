@@ -23,4 +23,8 @@ app.get('/index.css', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.css'));
 });
 
+app.get('/og.umd.js', function(req, res) {
+  res.sendFile(path.join(__dirname + '/lib/@openglobus/og.umd.js'));
+});
+
 app.listen(process.env.PORT || process.argv[2] || 10001);

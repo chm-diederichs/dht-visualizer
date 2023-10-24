@@ -31,7 +31,7 @@ function start () {
   rotate = rotateGlobe()
 
   globus.renderer.backgroundColor = new og.Vec3(0x37 / 255, 0x39 / 255, 0x40 / 255)
-  globus.planet.setRatioLod(1.3, 1.1)
+  // globus.planet.setRatioLod(1.3, 1.1)
   globus.planet.camera.rotateDown(10, true)
   globus.planet.camera.rotateRight(90)
   globus.planet.camera.rotateUp(15)
@@ -41,7 +41,8 @@ function start () {
     clampToGround: true,
     scaleByDistance: [300000, 50000000, 1000000000000000000]
   })
-    .addTo(globus.planet)
+
+  markers.addTo(globus.planet)
 
   setTimeout(() => {
     locations.map(add)

@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/chm-diederichs/dht-visualizer#readme",
   "dependencies": {
-    "dht-rpc": "^4.9.6",
-    "dht-size-up": "^1.1.0",
+    "dht-rpc": "^6.9.1",
+    "dht-size-up": "^2.0.0",
     "express": "^4.17.1",
     "geoip-lite": "^1.4.2"
   }

@@ -10,6 +10,22 @@ npm install
 node globe.js
 node app.js <PORT>
 ```
+
+## Build openglobus
+
+https://www.github.com/openglobus/openglobus
+
+```
+git clone git@github.com:openglobus/openglobus
+
+cd openglobus
+
+npm install
+npm run build
+
+cp -r lib ./APP_DIR
+```
+
 ## Update geolite2 db
 
 The ip address database is updated more often than the npm package, so for accurate location date, be sure to update the GeoLite2 db:
