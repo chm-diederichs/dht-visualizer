@@ -1,6 +1,6 @@
 {
   "name": "dht-visualizer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "See DHT peers on a globe",
   "main": "globe.js",
   "scripts": {
